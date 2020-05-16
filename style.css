@@ -13,6 +13,7 @@ body {
 .main {
   display: flex;
   flex-direction: row;
+  align-items: center;
   height: 100vh;
 }
 
@@ -27,14 +28,55 @@ align-items: center;
 }
 
 
-h1 {
-  text-align: center;
-  font-size: 5rem;
-  letter-spacing: 5px;
-  text-shadow: 2px 2px 0 #fff;
-  margin: 10px 0;
-  padding: 10px;
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height:50px;
+  border-radius:180px;
+  left:calc(50% - 75px);
+  top:calc(50% - 25px);
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  cursor:pointer;
+  line-height:12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
 }
+
+.title:before {
+  content: '';
+  z-index: 1;
+  position: absolute;
+  width: 12%;
+  height: 10%;
+
+  filter: blur(10px);
+  opacity: 0.5;
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+}
+
+
+.title:after {
+  content:'TETRIS';
+  text-align:center;
+  line-height:40px;
+  font-size:18px;
+  color:rgba(235,235,235,1);
+  font-family:'Verdana';
+  font-weight:bold;
+  z-index:5;
+  display:block;
+  border-radius:180px;
+  width:95%;
+  height:85%;
+  top:10%;
+  left:4%;
+  background-color:rgb(19, 20, 22);
+}
+
 
 h3 {
   font-size: 2rem;
@@ -51,15 +93,18 @@ button {
   font-family: inherit;
   font-size: 1.5rem;
   outline: none;
-  border: 2px solid white;
+  border: 3px solid white;
   border-radius: 25px;
-  padding: 10px 20px;
-  color: rgb(46, 179, 96);
+  padding: 10px 30px;
+  color: white;
+  letter-spacing: 2px;
+  font-weight: bold;
   transition: 0.2s ease;
 }
 
 button:hover {
   background: white;
+  color: black;
   cursor: pointer;
 }
 
@@ -73,11 +118,16 @@ button:hover {
 /* game container */
 .container {
   width: 40vw;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items:center;
   padding: 1rem;
-  background: blue;
+  background: black;
+  box-shadow: 0 0 10px white;
+  border-radius: 10px;
+  z-index : 1000;
+
 
 }
 .grid {
@@ -89,6 +139,7 @@ button:hover {
   display: flex;
   flex-wrap: wrap;
 }
+
 
 .grid div {
     height: 20px;
@@ -117,8 +168,18 @@ button:hover {
   height: 80px;
   display: flex;
   flex-wrap: wrap;
-  background-color: aqua;
+  background-color: black;
+  border: 4px solid rgb(90, 200, 184);
+  border-radius: 5px;
   margin-left: 2rem;
+  color: white;
+}
+
+.mini-grid h4 {
+  transform: translateY(-100px);
+  font-size: 1.5rem;
+  width: 400px;
+
 }
 
 .mini-grid div {
