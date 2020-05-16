@@ -6,23 +6,31 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Tetris</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 <body>
-  <h3>Score: <span id="score">0</span></h3>
-  <button type="button" name="button" id="start-button">Start/Pause</button>
+<div class="main">
+    <div class="utilities">
+      <h1>Tetris</h1>
+      <div class="disp">
+        <h3><span id="score">Score: 0</span></h3>
+        <h3>line : <span id="line-score">0<span></h3>
 
-  <div class="game">
+      </div>
+      <button id="start-button">Start/Pause</button>
+    </div>
+
+  <div class="container">
     <div class="grid">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-      <div>4</div>
-      <div>5</div>
-      <div>6</div>
-      <div>7</div>
-      <div>8</div>
-      <div>9</div>
-      <div>10</div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
       <div></div>
       <div></div>
       <div></div>
@@ -225,7 +233,29 @@
       <div class="taken"></div>
       <div class="taken"></div>
     </div>
+    <div class="mini-grid">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
   </div>
+
+</div>
+
+
 
   <script src="app.js" charset="utf-8"></script>
 </body>
