@@ -96,6 +96,7 @@ button {
   border: 3px solid white;
   border-radius: 25px;
   padding: 10px 30px;
+  margin: 2rem 0 1rem 0;
   color: white;
   letter-spacing: 2px;
   font-weight: bold;
@@ -108,11 +109,30 @@ button:hover {
   cursor: pointer;
 }
 
+.texts {
+  display: flex;
+  flex-direction: column;
+}
+
 
 .disp {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.rules {
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+}
+
+.rules h4 {
+  color: white;
+  margin: 5px 0;
+  font-size: 1.2rem;
+  letter-spacing: 3px;
 }
 
 /* game container */
@@ -124,7 +144,7 @@ button:hover {
   align-items:center;
   padding: 1rem;
   background: black;
-  box-shadow: 0 0 10px white;
+  border: 3px solid #5073b8;
   border-radius: 10px;
   z-index : 1000;
 
@@ -133,6 +153,7 @@ button:hover {
 .grid {
   background-color: black;
   border: 4px solid  rgb(46, 179, 96);
+  border-radius: 10px;
   padding-top: 1rem;
   height: 400px;
   width: 200px;
@@ -166,21 +187,23 @@ button:hover {
 .mini-grid {
   width: 80px;
   height: 80px;
+  padding: 1rem;
   display: flex;
   flex-wrap: wrap;
   background-color: black;
   border: 4px solid rgb(90, 200, 184);
   border-radius: 5px;
-  margin-left: 2rem;
   color: white;
+  margin: 0 0 0 3rem;
 }
 
-.mini-grid h4 {
-  transform: translateY(-100px);
-  font-size: 1.5rem;
-  width: 400px;
-
+.grid h3 {
+  text-align: center;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0;
 }
+
 
 .mini-grid div {
   height: 20px;
